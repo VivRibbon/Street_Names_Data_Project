@@ -1,0 +1,4 @@
+*.clj
+all_data_mapping_diversity/
+street_data_cleaning/
+*.lisp
