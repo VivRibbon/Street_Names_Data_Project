@@ -1,7 +1,21 @@
 #+title: Data Plan
 
-* Street Data Study Data Plan
 
 ** FAIR
+*** Findable
+The original data is provided by a foundation and is accessible in many forms on their website. The data at the time I accessed it is also saved in the github repo and both that and the analysis will remain on GitHub indefinitely.
+*** Accessible
+As mentioned, data and study will remain on Github and on the foundation's website. Metadata is in a PDF provided with the data.
+*** Interoperabe
+Metadata is provided as a PDF, but there is substantial metadata in the original CSV. The original data is presented as a CSV, which is easy to use in other contexts.
+*** Reusable
+This study is presented under the MIT license. The license of the original data is presented in the repo.
 ** CARE
-** DaRE
+Not relevant as the data does not concern indigenous communities.
+** DeAR
+*** Decentralized
+Although the data is provided by a specific foundation, a copy from the time I accessed it is saved in the GitHub repo for future-proofing reasons. The data is an CSV.
+*** Automated verification
+I will implement tests if needed.
+*** Revisable pipelines
+As the data is CSV in origin, changes to the CSV will bubble up in changes to the visualization. The visualization itself is an R script and can thus be easily tweaked.
