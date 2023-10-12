@@ -1,4 +1,11 @@
-*.clj
 all_data_mapping_diversity/
-street_data_cleaning/
+street_data_cleaning/doc
+street_data_cleaning/resources
+street_data_cleaning/target
+street_data_cleaning/test
+street_data_cleaning/*.port
+street_data_cleaning/src/street_data_cleaning/.clj-kondo
+street_data_cleaning/src/street_data_cleaning/.lsp
+.clj-kondo/
+.lsp/
 *.lisp
