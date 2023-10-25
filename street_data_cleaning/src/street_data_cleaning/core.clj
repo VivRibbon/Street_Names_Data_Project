@@ -14,7 +14,8 @@
 (defn maps->csv-data
   "Reverses the conversion process, turning a list of maps back into CSV data."
   [maps]
-  (let [columns (-> maps first keys)
+  (let [columns
+        (-> maps first keys)
         headers (mapv name columns)
         rows (mapv #(mapv % columns) maps)]
     (into [headers] rows)))
@@ -28,6 +29,7 @@
     (->> (csv/read-csv reader)
          (csv-data->maps)
          (filter #(= (:person %) "1"))
+         (filter #(not= (:gender %) "other"))
          (map #(select-keys % [:lau_name :country :street_name
                                :named_after_n :label :instance_of_label
                                :description :gender
@@ -39,7 +41,6 @@
 
 (defn main []
   (process-csv "orig_data.csv" "processed_data.csv"))
-
 
 
 (main)
