@@ -22,7 +22,7 @@
 
 
 (defn process-csv
-  "Data cleaning function. An originating file and destination file are consumed by the io/reader. The threading operator is used to put the read file through a processing pipeline which takes the CSV data from the reader, turns it into a list of maps, retains only those streets named after a person, removes a number of columns that aren't relevant, converts the processed maps back into CSV data, and writes it to the destination file."
+  "Data cleaning function. An originating file and destination file are consumed by the io/reader. The threading operator is used to put the read file through a processing pipeline which takes the CSV data from the reader, turns it into a list of maps, retains only those streets named after a person and with a listed gender, removes a number of columns that aren't relevant, converts the processed maps back into CSV data, and writes it to the destination file."
   [from to]
   (with-open [reader (io/reader from)
               writer (io/writer to)]
