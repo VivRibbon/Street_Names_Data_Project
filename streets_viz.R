@@ -71,6 +71,14 @@ birth_year_box_by_country_1500 <- ggplot(birth_year_data, aes(x = country, y = a
   coord_cartesian(ylim = c(1500, 2023)) +
   theme_minimal()
 
+birth_histo <- ggplot(birth_year_data, aes(as.numeric(date_of_birth), fill = gender)) +
+  geom_histogram(bins = 300) +
+  theme_minimal()
+
+birth_freq <- ggplot(birth_year_data, aes(as.numeric(date_of_birth), color = gender)) +
+  geom_freqpoly(bins = 100) +
+  theme_minimal()
+
 # Save the plots to files.
 ggsave("gender_count_bars.png", plot = gender_count_bars)
 ggsave("gender_by_country_bars.png", plot = gender_by_country_bars)
@@ -79,3 +87,9 @@ ggsave("gender_percent_by_country.png", plot = gender_percent_by_country)
 ggsave("gender_count_percent.png", plot = gender_count_percent)
 ggsave("gender_by_country_percent_over.png", plot = gender_by_country_percent_over)
 ggsave("gender_by_country_percent_grid.png", plot = gender_by_country_percent_grid)
+ggsave("birth_year_box.png", plot = birth_year_box)
+ggsave("birth_year_box_1500.png", plot = birth_year_box_1500)
+ggsave("birth_year_box_by_country.png", plot = birth_year_box_by_country)
+ggsave("birth_year_box_by_country_1500.png", plot = birth_year_box_by_country_1500)
+ggsave("birth_histo.png", plot = birth_histo)
+ggsave("birth_freq.png", plot = birth_freq)
