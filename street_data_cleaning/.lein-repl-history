@@ -1,0 +1,14 @@
+[{:a 2 :b 3} {:a 1 :b 5} {:a "wow!" :b "banana"}]
+[{:a 1 :b 2 :c 3 :d 4 :e 5} {:a 5 :b 3 :c 7 :d 90 :e 43} {:a 76 :b 0 :c 43 :d "banan"}0
+[{:a 1 :b 2 :c 3 :d 4 :e 5} {:a 5 :b 3 :c 7 :d 90 :e 43} {:a 76 :b 0 :c 43 :d "banan"}]
+ls
+5
+(defn test [num
+]
+num + 5)
+(defn some-numbers [num]
+num + 5)
+(some-numbers 5)
+lein rebl
+5
+exit
